@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Address Book";
+}
+<h2>Address Book</h2>
+
+<div class="left-aligned-section">
+    <ul data-bind="foreach: Users()">
+        <li>
+            <div class="user-item-border">
+                <div>
+                    <label data-bind="text: Name"></label>
+                </div>
+                <div>
+                    <label data-bind="text: Email"></label>
+                </div>
+                <div>
+                    <a href="#" class="show-details" data-bind="click: $parent.SelectUser">Show Details</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+<div class="right-aligned-section" data-bind="with: SelectedUser">
+    <div class="address-header">
+        <div class="left-aligned-div"><strong>Address for&nbsp;</strong></div>
+        <div class="left-aligned-div" data-bind="text: Name"></div>
+    </div>
+    <ul data-bind="foreach: Addresses">
+        <li>
+            <div class="address-item-border">
+                <div>
+                    <div class="address-label">Street: </div>
+                    <div style="font-weight: bold" data-bind="text: Street"></div>
+                </div>
+                <div>
+                    <div class="address-label">House: </div>
+                    <div style="font-weight: bold" data-bind="text: House"></div>
+                </div>
+                <div>
+                    <div class="address-label">City: </div>
+                    <div style="font-weight: bold" data-bind="text: City"></div>
+                </div>
+                <div>
+                    <div class="address-label">State: </div>
+                    <div style="font-weight: bold" data-bind="text: State"></div>
+                </div>
+                <div>
+                    <div class="address-label">Country: </div>
+                    <div style="font-weight: bold" data-bind="text: Country"></div>
+                </div>
+                <div>
+                    <div class="address-label">Zip: </div>
+                    <div style="font-weight: bold" data-bind="text: Zip"></div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+@section Scripts{
+    <script src="~/Scripts/knockout-2.2.1.js"></script>
+    <script src="~/Scripts/knockout-2.2.1.debug.js"></script>
+    <script src="~/Scripts/knockout.mapping-latest.debug.js"></script>
+    <script src="~/Scripts/addressbook-vm.js"></script>
+    <script src="~/Scripts/addressbook-client.js"></script>
+}

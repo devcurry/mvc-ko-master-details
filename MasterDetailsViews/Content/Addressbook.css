@@ -1,0 +1,52 @@
+﻿.left-aligned-section {
+    float: left;
+    width: 33%;
+    height: 100%;
+    background-color: #bad5eb;
+}
+
+.right-aligned-section {
+    float: right;
+    width: 66%;
+    height: 100%;
+    background-color: #91b7e0;
+}
+
+.user-item-border {
+    border: 1px solid #065db1;
+    margin: 2px;
+    padding: 10px;
+}
+
+.left-aligned-div {
+    float: left;
+}
+
+.address-item-border {
+    border: 1px solid #065db1;
+    margin: 2px;
+    padding: 10px;
+}
+
+.address-header {
+    height: 30px;
+    background-color: #065db1;
+    color: #c7c8ca;
+    padding-top: 5px;
+    padding-left: 30px;
+}
+
+.address-label {
+    float: left;
+    width: 200px;
+}
+
+ul {
+    list-style: none;
+    display: inline;
+    padding: 0;
+}
+
+li {
+    padding-left: 0px;
+}
